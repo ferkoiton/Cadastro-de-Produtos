@@ -1,5 +1,5 @@
 package dominio;
 
-public class FichaTecnica extends EntidadeDominio {
+public class FichaTecnica {
 
 }

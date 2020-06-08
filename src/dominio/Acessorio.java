@@ -1,5 +1,7 @@
 package dominio;
 
-public class Acessorio extends EntidadeDominio{
+public class Acessorio {
+	
+	
 
 }
