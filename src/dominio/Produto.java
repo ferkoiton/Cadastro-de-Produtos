@@ -23,7 +23,6 @@ public class Produto {
 
 	public Produto(Integer id, String nome, Double valorCompra, Date dataEntrada, Integer quantidade, String comprador,
 			FichaTecnica fichaTecnica, Linha linha) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.valorCompra = valorCompra;
