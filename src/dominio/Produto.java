@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Produto {
+public class Produto extends EntidadeDominio {
 	
 	private Integer id;
 	private String nome;

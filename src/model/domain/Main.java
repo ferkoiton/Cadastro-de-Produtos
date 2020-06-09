@@ -1,4 +1,4 @@
-package entities;
+package model.domain;
 
 public class Main {
 
