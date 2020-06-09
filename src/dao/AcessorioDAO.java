@@ -13,7 +13,6 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.List;
 
-import model.domain.Endereco;
 import dominio.EntidadeDominio;
 import util.ConnectionFactory;
 
@@ -23,5 +22,29 @@ import util.ConnectionFactory;
  */
 public class AcessorioDAO implements IDAO {
         private Connection connection = null;
+
+		@Override
+		public void salvar(EntidadeDominio entidade) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void alterar(EntidadeDominio entidade) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void excluir(EntidadeDominio entidade) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public List<EntidadeDominio> consultar(EntidadeDominio entidade) {
+			// TODO Auto-generated method stub
+			return null;
+		}
     
 }
