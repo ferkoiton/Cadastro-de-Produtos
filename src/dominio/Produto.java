@@ -7,11 +7,11 @@ import java.util.List;
 
 public class Produto extends EntidadeDominio {
 	
-	private Integer id;
+	private int id;
 	private String nome;
 	private Double valorCompra;
 	private Date dataEntrada;
-	private Integer quantidade;
+	private int quantidade;
 	private String comprador;
 	
 	private List<Acessorio> acessorio = new ArrayList<>();
@@ -21,7 +21,7 @@ public class Produto extends EntidadeDominio {
 	public Produto() {
 	}
 
-	public Produto(Integer id, String nome, Double valorCompra, Date dataEntrada, Integer quantidade, String comprador,
+	public Produto(int id, String nome, Double valorCompra, Date dataEntrada, int quantidade, String comprador,
 			FichaTecnica fichaTecnica, Linha linha) {
 		this.id = id;
 		this.nome = nome;
@@ -33,11 +33,11 @@ public class Produto extends EntidadeDominio {
 		this.linha = linha;
 	}
 
-	public Integer getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -65,11 +65,11 @@ public class Produto extends EntidadeDominio {
 		this.dataEntrada = dataEntrada;
 	}
 
-	public Integer getQuantidade() {
+	public int getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(Integer quantidade) {
+	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
 

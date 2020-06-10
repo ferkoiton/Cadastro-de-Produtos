@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.List;
-
+import java.util.ArrayList;
 import dominio.Produto;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -49,18 +49,22 @@ public class ProdutoDAO implements IDAO {
                     pst.setString(5, produto.getComprador());
                     
                     pst.execute();
-                    connection.close();          
+                    pst.close();
+                    
+                    System.out.println("Gravado!");
+                    connection.close();
                     
             } catch ( SQLException e) {
                             throw new RuntimeException (e);
             } catch (ClassNotFoundException ex) {
                 Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, ex);
-            }
+            } 
 }
         
+        public void alterar(EntidadeDominio entidade){
         
         
-    public void alterar(EntidadeDominio entidade);
+    };
     
     
     
@@ -68,6 +72,33 @@ public class ProdutoDAO implements IDAO {
     
     
     
-    public List<EntidadeDominio>consultar(EntidadeDominio entidade);
+    public List<EntidadeDominio>consultar() {
+            
+            PreparedStatement pst = null;
+            
+            try {
+                
+                    connection = ConnectionFactory.getConnectionMySQL();
+                    
+                    String sql = "select * from produto";
+                    
+                    pst = connection.prepareStatement(sql);
+                    ResultSet rs = pst.executeQuery();
+                    
+                    List<EntidadeDominio> produtos = new ArrayList <>();
+                    
+                    while (rs.next()) {
+                        Produto produto = new Produto();
+                        produto.setNome(rs.getString("nome"));
+                        produto.setValorCompra(rs.getDouble("valorCompra"));
+                        produto.setDataEntrada(rs.getDate("dtEntrada").getTime());
+                        produto.setComprador(rs.getString("comprador"));
+                        
+                        produtos.add(produto);
+                    }
+            } catch (SQLException ex) {
+                Logger.getLogger(ProdutoDAO.class.getName()).log(Level.SEVERE, null, ex);
+            }
+    };
     
 }
