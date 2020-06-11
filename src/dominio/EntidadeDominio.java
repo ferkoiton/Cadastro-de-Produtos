@@ -12,11 +12,22 @@ import java.util.Date;
  * @author fernandotonooka
  */
 public class EntidadeDominio {
-    
+	
     private int id;
-    private Date dtEntrada;
+    private String descricao;
 
-    /**
+    public EntidadeDominio() {
+    	
+    }
+    
+    
+    public EntidadeDominio(int id, String descricao) {
+		this.id = id;
+		this.descricao = descricao;
+	}
+
+
+	/**
      * @return the id
      */
     public int getId() {
@@ -30,19 +41,16 @@ public class EntidadeDominio {
         this.id = id;
     }
 
-    /**
-     * @return the dtEntrada
-     */
-    public Date getDtEntrada() {
-        return dtEntrada;
-    }
+	public String getDescricao() {
+		return descricao;
+	}
 
-    /**
-     * @param dtEntrada the dtEntrada to set
-     */
-    public void setDtEntrada(Date dtEntrada) {
-        this.dtEntrada = dtEntrada;
-    }
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+    
+    
     
     
 }

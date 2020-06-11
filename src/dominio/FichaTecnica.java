@@ -1,8 +1,7 @@
 package dominio;
 
-public class FichaTecnica {
+public class FichaTecnica extends EntidadeDominio {
 	
-	private Integer id;
 	private String categoria;
 	private String subCategoria;
 	private String nome;
@@ -13,9 +12,9 @@ public class FichaTecnica {
 	public FichaTecnica() {
 	}
 
-	public FichaTecnica(Integer id, String categoria, String subCategoria, String nome, String observacoes,
-			Linha linhaFicha, Componente componente) {
-		this.id = id;
+	public FichaTecnica(int id, String descricao, String categoria, String subCategoria, String nome,
+			String observacoes, Linha linhaFicha, Componente componente) {
+		super(id, descricao);
 		this.categoria = categoria;
 		this.subCategoria = subCategoria;
 		this.nome = nome;
@@ -24,13 +23,7 @@ public class FichaTecnica {
 		this.componente = componente;
 	}
 
-	public Integer getId() {
-		return id;
-	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getCategoria() {
 		return categoria;

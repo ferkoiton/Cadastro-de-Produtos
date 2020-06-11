@@ -7,7 +7,6 @@ import java.util.List;
 
 public class Produto extends EntidadeDominio {
 	
-	private Integer id;
 	private String nome;
 	private Double valorCompra;
 	private Date dataEntrada;
@@ -20,10 +19,11 @@ public class Produto extends EntidadeDominio {
 	
 	public Produto() {
 	}
+	
+	
 
-	public Produto(Integer id, String nome, Double valorCompra, Date dataEntrada, Integer quantidade, String comprador,
-			FichaTecnica fichaTecnica, Linha linha) {
-		this.id = id;
+	public Produto(String nome, Double valorCompra, Date dataEntrada, Integer quantidade, String comprador, FichaTecnica fichaTecnica, Linha linha) {
+		super();
 		this.nome = nome;
 		this.valorCompra = valorCompra;
 		this.dataEntrada = dataEntrada;
@@ -33,13 +33,7 @@ public class Produto extends EntidadeDominio {
 		this.linha = linha;
 	}
 
-	public Integer getId() {
-		return id;
-	}
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getNome() {
 		return nome;

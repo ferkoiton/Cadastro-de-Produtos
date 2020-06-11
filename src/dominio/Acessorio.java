@@ -1,30 +1,19 @@
 package dominio;
 
-public class Acessorio {
+public class Acessorio extends EntidadeDominio {
 	
-	private Integer id;
 	private String nome;
-	private String descricao;
 	private Integer quantidade;
 	private Linha acessorioLinha;
 	
 	public Acessorio() {
 	}
 
-	public Acessorio(Integer id, String nome, String descricao, Integer quantidade, Linha acessorioLinha) {
-		this.id = id;
+	public Acessorio(int id, String descricao, String nome, Integer quantidade, Linha acessorioLinha) {
+		super(id, descricao);
 		this.nome = nome;
-		this.descricao = descricao;
 		this.quantidade = quantidade;
 		this.acessorioLinha = acessorioLinha;
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
 	}
 
 	public String getNome() {
@@ -33,14 +22,6 @@ public class Acessorio {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
 	}
 
 	public Integer getQuantidade() {
