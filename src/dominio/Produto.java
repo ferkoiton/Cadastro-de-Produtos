@@ -10,7 +10,7 @@ public class Produto extends EntidadeDominio {
 	private String nome;
 	private Double valorCompra;
 	private Date dataEntrada;
-	private Integer quantidade;
+	private int quantidade;
 	private String comprador;
 	
 	private List<Acessorio> acessorio = new ArrayList<>();
@@ -20,10 +20,9 @@ public class Produto extends EntidadeDominio {
 	public Produto() {
 	}
 	
-	
-
-	public Produto(String nome, Double valorCompra, Date dataEntrada, Integer quantidade, String comprador, FichaTecnica fichaTecnica, Linha linha) {
-		super();
+	public Produto(int id, String nome, Double valorCompra, String descricao, Date dataEntrada, int quantidade, String comprador,
+			FichaTecnica fichaTecnica, Linha linha) {
+		super(id, descricao);
 		this.nome = nome;
 		this.valorCompra = valorCompra;
 		this.dataEntrada = dataEntrada;
@@ -32,8 +31,6 @@ public class Produto extends EntidadeDominio {
 		this.fichaTecnica = fichaTecnica;
 		this.linha = linha;
 	}
-
-
 
 	public String getNome() {
 		return nome;
@@ -59,11 +56,11 @@ public class Produto extends EntidadeDominio {
 		this.dataEntrada = dataEntrada;
 	}
 
-	public Integer getQuantidade() {
+	public int getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(Integer quantidade) {
+	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
 
