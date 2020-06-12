@@ -6,7 +6,8 @@
 package dao;
 
 import java.util.List;
-import dominio.EntidadeDominio;
+
+import model.domain.EntidadeDominio;
 /**
  *
  * @author fernandotonooka

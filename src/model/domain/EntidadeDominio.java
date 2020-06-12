@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dominio;
-
-import java.util.Date;
+package model.domain;
 
 /**
  *
  * @author fernandotonooka
+
  */
 public class EntidadeDominio {
 	

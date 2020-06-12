@@ -13,10 +13,13 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.ArrayList;
-import dominio.Produto;
+
+import model.domain.EntidadeDominio;
+import model.domain.Produto;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import dominio.EntidadeDominio;
+
 import util.ConnectionFactory;
 
 /**
@@ -68,7 +71,9 @@ public class ProdutoDAO implements IDAO {
     
     
     
-    public void excluir(EntidadeDominio entidade);
+    public void excluir(EntidadeDominio entidade) {
+    	
+    };
     
     
     

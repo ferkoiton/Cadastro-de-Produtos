@@ -13,7 +13,7 @@ import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.List;
 
-import dominio.EntidadeDominio;
+import model.domain.EntidadeDominio;
 import util.ConnectionFactory;
 
 /**

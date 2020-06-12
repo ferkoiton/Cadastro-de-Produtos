@@ -1,4 +1,4 @@
-package dominio;
+package model.domain;
 
 public class Acessorio extends EntidadeDominio {
 	
