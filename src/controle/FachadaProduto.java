@@ -22,19 +22,31 @@ public class FachadaProduto implements IFachada{
 
 	@Override
 	public String alterar(EntidadeDominio entidade) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Produto produto = (Produto) entidade;
+		IDAO dao = new ProdutoDAO();
+		
+		dao.alterar(produto);
+		
+		return "Produto alterado.";
 	}
 
 	@Override
 	public String excluir(EntidadeDominio entidade) {
-		// TODO Auto-generated method stub
-		return null;
+		Produto produto = (Produto) entidade;
+		IDAO dao = new ProdutoDAO();
+		
+		dao.excluir(produto);
+		
+		return "Produto excluido";
 	}
 
 	@Override
 	public List<EntidadeDominio> consultar(EntidadeDominio entidade) {
-		// TODO Auto-generated method stub
+		Produto produto = (Produto) entidade;
+		IDAO dao = new ProdutoDAO();
+		
+		dao.consultar(produto);
 		return null;
 	}
 
